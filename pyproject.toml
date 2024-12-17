@@ -5,6 +5,7 @@ description = "A Python package for detecting toxicity in online comments and ha
 authors = ["Xun Lei, Chenxi Guo, Jiayi Peng, Yiran Tao"]
 license = "MIT"
 readme = "README.md"
+packages = [{ include = "package" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -14,11 +15,12 @@ torch = "^2.5.1"
 keras = "^3.7.0"
 tensorflow = "^2.18.0"
 argparse = "^1.4.0"
+protobuf = "^5.29.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0"                     
-black = "^23.0"                    
-ruff = "^0.1"  
+black = "^24.10.0"                 
+ruff = "^0.8.3" 
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.10.0"
@@ -28,3 +30,6 @@ ruff = "^0.8.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+toxicity_main = "package.toxic.bin.main:main"
