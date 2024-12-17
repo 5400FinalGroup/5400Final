@@ -1,5 +1,5 @@
 # Toxic Comments Detection System in AI Art
-Team members: Chenxi Guo, Jiayi Peng, Xun Lei,Yiran Tao
+Team members: Chenxi Guo, Jiayi Peng, Xun Lei, Yiran Tao
 
 # **Introduction**
 
