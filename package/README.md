@@ -54,6 +54,9 @@ poetry run toxicity_main -test <path_to_test_file> -m <model_type> -o <output_fi
 | `-p/--print`         | Optional | Print results to the console.                                                                |
 | `-eval/--evaluate`   | Optional | Evaluate model performance on the training set. Training set must contain a `target` column. |
 
+### Package Architecture Diagram: Workflow and Module Interactions
+
+![](../images/package_flow.png)
 
 ## **Example Usage**
 

@@ -1,3 +1,6 @@
+# Toxic Comments Detection System in AI Art
+Team members: Chenxi Guo, Jiayi Peng, Xun Lei,Yiran Tao
+
 # **Introduction**
 
 ## **Problem Statement**  
@@ -17,11 +20,14 @@ We achieve this by:
 4. Evaluating and comparing model performance using **Mean Squared Error (MSE)**.  
 5. Exporting predictions for further analysis and providing a practical web-based application for toxicity detection.
 
+(All the notebooks have been placed in the archive_notebooks folder for organization and future reference.)
 ---
 
 # **Workflow**
 
 The project workflow consists of the following stages:
+
+![](./images/workflow.png)
 
 ### **1. Data Access and Collection**  
 - **Test Data**: Tweets containing the query **"AI Art"** were collected using the **X API** (formerly Twitter API) via the Tweepy library. To ensure efficient data collection, rate limits were dynamically managed with multiple API keys.  
@@ -65,6 +71,25 @@ Three models were implemented for toxicity prediction:
 - The model with the best performance (lowest MSE) was selected for deployment.
 
 ---
+# **Package**
+
+## **Goal**  
+
+This package is designed for analyzing the toxicity of comments, particularly focused on AI art discussions. It utilizes multiple machine learning models such as Decision Tree, SGD Regression, and LSTM to predict toxicity scores based on text input. The core functionality includes text data preprocessing, training, prediction, and evaluation, providing a simple interface for using these models.
+
+The key features of the package include:
+
+    1. Model Training and Prediction: Three machine learning models (Decision Tree, SGD, and LSTM) to predict toxicity scores.
+
+    2. Evaluation: Tools to evaluate the performance of models using metrics such as Mean Squared Error (MSE).
+
+    3. API Integration: Flask-based web application to interact with the models and perform real-time predictions.
+
+## **How to Use**  
+
+For more detailed explanations and usage guidelines, please refer to the full documentation within the README. [Package README](./package/README.md).  
+
+---
 
 # **Data**
 
@@ -78,6 +103,10 @@ The data used in this project consists of:
 
 Both datasets are stored in a Google Drive folder and can be accessed via the following link:  
 [Click Here](https://drive.google.com/drive/folders/1sf55eVN4-7yXEqG6ucAwWtQQ9Klx7KHt?usp=sharing).
+
+### **How to Use**  
+To use the package, follow the instructions provided in the [Package README](./app/README.md). 
+
 
 ---
 
