@@ -8,7 +8,7 @@ The cleaned tweets were structured into a Pandas DataFrame, with unnecessary col
 
 For access to all of our data used in this project, please see the link in the [Data](#data) Section.
 
-## Data {#data}
+## Data
 
 The data used for training the machine learning models is stored in a Google Drive folder, and is publicly available for reference. The web app and the associated package are based on a fixed training set that has been preprocessed and used for training the models (Decision Tree, SGD Regression, and LSTM).
 
