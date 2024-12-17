@@ -1,4 +1,4 @@
-from package.toxic.utils.parse_csv import DecisionTreeModel, LSTMModel, SGDRegressionModel
+from package.toxic.utils.models import DecisionTreeModel, LSTMModel, SGDRegressionModel
 from package.toxic.toxics.eval import evaluate_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import argparse
@@ -8,7 +8,7 @@ import torch
 
 def main():
     parser = argparse.ArgumentParser(description="Run toxic comment prediction.")
-    parser.add_argument("-train", "--train_file", type=str, default="data/data-clean/cleaned_train.csv",help="Path to the training dataset file (CSV format).")
+    parser.add_argument("-train", "--train_file", type=str, default="package/toxic/bin/cleaned_train.csv",help="Path to the training dataset file (CSV format).")
     parser.add_argument("-test", "--test_file", type=str, required=True, help="Path to the test dataset file (CSV format).")
     parser.add_argument("-m", "--model", type=str, required=True, choices=["Tree", "SGD", "LSTM"], help="Model type.")
     parser.add_argument("-o", "--output", type=str, default="predictions.csv", help="Path to save predictions.")
