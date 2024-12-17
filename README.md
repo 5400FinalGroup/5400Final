@@ -103,11 +103,6 @@ The data used in this project consists of:
 
 Both datasets are stored in a Google Drive folder and can be accessed via the following link:  
 [Click Here](https://drive.google.com/drive/folders/1sf55eVN4-7yXEqG6ucAwWtQQ9Klx7KHt?usp=sharing).
-
-### **How to Use**  
-To use the package, follow the instructions provided in the [Package README](./app/README.md). 
-
-
 ---
 
 # **Web App: Toxicity Analysis**
