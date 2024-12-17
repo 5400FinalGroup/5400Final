@@ -7,6 +7,21 @@ import torch
 
 
 def main():
+    """
+    Runs the toxic comment prediction process using different machine learning models.
+
+    This function parses command-line arguments to select a model type, training data, 
+    test data, and other parameters. Based on the selected model, it trains the model 
+    using the training data, makes predictions on the test data, and outputs the results. 
+
+    Arguments:
+        - --train_file: Path to the training dataset file (CSV format).
+        - --test_file: Path to the test dataset file (CSV format). This argument is required.
+        - --model: Type of model to use for prediction. Options: "Tree", "SGD", "LSTM". This argument is required.
+        - --output: Path to save the predictions. Default is "predictions.csv".
+        - --print: Flag to print results to the console.
+        - --evaluate: Flag to evaluate model performance on the training data, if ground truth is available.
+    """
     parser = argparse.ArgumentParser(description="Run toxic comment prediction.")
     parser.add_argument("-train", "--train_file", type=str, default="package/toxic/bin/cleaned_train.csv",help="Path to the training dataset file (CSV format).")
     parser.add_argument("-test", "--test_file", type=str, required=True, help="Path to the test dataset file (CSV format).")

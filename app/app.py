@@ -13,6 +13,19 @@ CORS(app)
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    """
+    Predicts the toxicity of a comment based on the selected model (Decision Tree, SGD, or LSTM).
+
+    This function receives a JSON request containing the user ID, comment text, and model type. 
+    It validates the input data, selects the appropriate machine learning model, performs the prediction, 
+    and returns the predicted toxicity score.
+
+    Steps:
+    1. Parse the input data (user ID, comment text, and model type).
+    2. Validate input data for required fields and correct formats.
+    3. Use the specified model type (Decision Tree, SGD, or LSTM) to make a prediction.
+    4. Return the prediction result in JSON format.
+    """
     test_file_path = "temp_test_data.csv"  # Define the path for the test file
     try:
         input_data = request.get_json()
